@@ -2,9 +2,4 @@
 .DS_Store
 *.bak
 .sqlite.db
-*.mode1v3
-*.pbxuser
-server/templates/VERSION.txt
-server/media/content/*
-server/media/upload/*
-client/iphone/Cameleo/build/*
+templates/VERSION.txt

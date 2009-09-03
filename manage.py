@@ -4,7 +4,7 @@
 from os.path import abspath, dirname, join
 import sys
 cwd = dirname(abspath(__file__))
-sys.path.insert(0, join(cwd, 'lib'))
+sys.path.insert(0, join(cwd, 'lib/django'))
 sys.path.insert(0, join(cwd, 'apps'))
 
 from django.core.management import execute_manager
