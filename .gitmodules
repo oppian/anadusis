@@ -1,3 +1,0 @@
-[submodule "lib/pinax"]
-	path = lib/pinax
-	url = git://github.com/pinax/pinax.git
