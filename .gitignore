@@ -3,3 +3,4 @@
 *.bak
 .sqlite.db
 templates/VERSION.txt
+pip-log.txt
