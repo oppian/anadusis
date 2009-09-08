@@ -1,0 +1,379 @@
+Downloading/unpacking http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+  Downloading from URL http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+  Running setup.py egg_info for package from http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+    running egg_info
+    creating pip-egg-info/PIL.egg-info
+    writing pip-egg-info/PIL.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/PIL.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/PIL.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    writing manifest file 'pip-egg-info/PIL.egg-info/SOURCES.txt'
+  Source in /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build has version 1.1.6, which satisfies requirement PIL from http://effbot.org/downloads/Imaging-1.1.6.tar.gz
+Installing collected packages: PIL
+  Running setup.py install for PIL
+    Running command /Users/stephenhartley/virtualenvs/anadusis/bin/python -c "import setuptools; __file__='/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py'; execfile('/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py')" install --single-version-externally-managed --record /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-i70U4G-record/install-record.txt --install-headers /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/lib/include
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.macosx-10.3-fat-2.6
+    copying PIL/__init__.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ArgImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/BdfFontFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/BmpImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/BufrStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ContainerIO.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/CurImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/DcxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/EpsImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ExifTags.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/FitsStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/FliImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/FontFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/FpxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GbrImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GdImageFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GifImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GimpGradientFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GimpPaletteFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/GribStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/Hdf5StubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/IcnsImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/IcoImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/Image.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageChops.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageColor.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageDraw.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageDraw2.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageEnhance.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageFileIO.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageFilter.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageFont.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageGL.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageGrab.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageMath.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageMode.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageOps.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImagePalette.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImagePath.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageQt.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageSequence.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageStat.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageTk.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageTransform.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImageWin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/ImtImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/IptcImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/JpegImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/McIdasImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/MicImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/MpegImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/MspImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/OleFileIO.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PaletteFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PalmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PcdImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PcfFontFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PcxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PdfImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PixarImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PngImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PpmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PsdImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/PSDraw.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/SgiImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/SpiderImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/SunImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/TarIO.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/TgaImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/TiffImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/TiffTags.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/WalImageFile.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/WmfImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/XbmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/XpmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    copying PIL/XVThumbImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+    running build_ext
+    --- using frameworks at /System/Library/Frameworks
+    building '_imaging' extension
+    creating build/temp.macosx-10.3-fat-2.6
+    creating build/temp.macosx-10.3-fat-2.6/libImaging
+    Compiling with an SDK that doesn't seem to exist: /Developer/SDKs/MacOSX10.4u.sdk
+    Please check your Xcode installation
+    gcc -arch ppc -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -O3 -DHAVE_LIBJPEG -DHAVE_LIBZ -I/System/Library/Frameworks/Tcl.framework/Headers -I/System/Library/Frameworks/Tk.framework/Headers -I/opt/local/include/freetype2 -IlibImaging -I/sw/include -I/opt/local/include -I/Users/stephenhartley/virtualenvs/anadusis/include -I/usr/local/include -I/usr/include -I/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c _imaging.c -o build/temp.macosx-10.3-fat-2.6/_imaging.o
+    In file included from /usr/include/architecture/i386/math.h:626,
+                     from /usr/include/math.h:28,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h:235,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:58,
+                     from _imaging.c:76:
+    /usr/include/AvailabilityMacros.h:108:14: warning: #warning Building for Intel with Mac OS X Deployment Target < 10.4 is invalid.
+    In file included from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/unicodeobject.h:4,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:85,
+                     from _imaging.c:76:
+    /usr/include/stdarg.h:4:25: error: stdarg.h: No such file or directory
+    In file included from /usr/include/math.h:26,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h:235,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:58,
+                     from _imaging.c:76:
+    /usr/include/architecture/ppc/math.h:666: warning: conflicting types for built-in function ‘scalb’
+    In file included from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/unicodeobject.h:4,
+                     from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:85,
+                     from _imaging.c:76:
+    /usr/include/stdarg.h:4:25: error: stdarg.h: No such file or directory
+    _imaging.c:2907: warning: initialization from incompatible pointer type
+    _imaging.c:2967: warning: initialization from incompatible pointer type
+    _imaging.c:2907: warning: initialization from incompatible pointer type
+    _imaging.c:2967: warning: initialization from incompatible pointer type
+    lipo: can't figure out the architecture type of: /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-//cctSy18w.out
+    error: command 'gcc' failed with exit status 1
+    Complete output from command /Users/stephenhartley/virtualenvs/anadusis/bin/python -c "import setuptools; __file__='/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py'; execfile('/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py')" install --single-version-externally-managed --record /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-i70U4G-record/install-record.txt --install-headers /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/lib/include:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.macosx-10.3-fat-2.6
+
+copying PIL/__init__.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ArgImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/BdfFontFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/BmpImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/BufrStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ContainerIO.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/CurImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/DcxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/EpsImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ExifTags.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/FitsStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/FliImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/FontFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/FpxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GbrImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GdImageFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GifImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GimpGradientFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GimpPaletteFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/GribStubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/Hdf5StubImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/IcnsImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/IcoImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/Image.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageChops.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageColor.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageDraw.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageDraw2.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageEnhance.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageFileIO.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageFilter.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageFont.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageGL.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageGrab.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageMath.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageMode.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageOps.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImagePalette.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImagePath.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageQt.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageSequence.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageStat.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageTk.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageTransform.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImageWin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/ImtImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/IptcImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/JpegImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/McIdasImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/MicImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/MpegImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/MspImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/OleFileIO.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PaletteFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PalmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PcdImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PcfFontFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PcxImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PdfImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PixarImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PngImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PpmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PsdImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/PSDraw.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/SgiImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/SpiderImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/SunImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/TarIO.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/TgaImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/TiffImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/TiffTags.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/WalImageFile.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/WmfImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/XbmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/XpmImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+copying PIL/XVThumbImagePlugin.py -> build/lib.macosx-10.3-fat-2.6
+
+running build_ext
+
+--- using frameworks at /System/Library/Frameworks
+
+building '_imaging' extension
+
+creating build/temp.macosx-10.3-fat-2.6
+
+creating build/temp.macosx-10.3-fat-2.6/libImaging
+
+Compiling with an SDK that doesn't seem to exist: /Developer/SDKs/MacOSX10.4u.sdk
+
+Please check your Xcode installation
+
+gcc -arch ppc -arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -O3 -DHAVE_LIBJPEG -DHAVE_LIBZ -I/System/Library/Frameworks/Tcl.framework/Headers -I/System/Library/Frameworks/Tk.framework/Headers -I/opt/local/include/freetype2 -IlibImaging -I/sw/include -I/opt/local/include -I/Users/stephenhartley/virtualenvs/anadusis/include -I/usr/local/include -I/usr/include -I/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c _imaging.c -o build/temp.macosx-10.3-fat-2.6/_imaging.o
+
+In file included from /usr/include/architecture/i386/math.h:626,
+
+                 from /usr/include/math.h:28,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h:235,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:58,
+
+                 from _imaging.c:76:
+
+/usr/include/AvailabilityMacros.h:108:14: warning: #warning Building for Intel with Mac OS X Deployment Target < 10.4 is invalid.
+
+In file included from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/unicodeobject.h:4,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:85,
+
+                 from _imaging.c:76:
+
+/usr/include/stdarg.h:4:25: error: stdarg.h: No such file or directory
+
+In file included from /usr/include/math.h:26,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h:235,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:58,
+
+                 from _imaging.c:76:
+
+/usr/include/architecture/ppc/math.h:666: warning: conflicting types for built-in function ‘scalb’
+
+In file included from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/unicodeobject.h:4,
+
+                 from /Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:85,
+
+                 from _imaging.c:76:
+
+/usr/include/stdarg.h:4:25: error: stdarg.h: No such file or directory
+
+_imaging.c:2907: warning: initialization from incompatible pointer type
+
+_imaging.c:2967: warning: initialization from incompatible pointer type
+
+_imaging.c:2907: warning: initialization from incompatible pointer type
+
+_imaging.c:2967: warning: initialization from incompatible pointer type
+
+lipo: can't figure out the architecture type of: /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-//cctSy18w.out
+
+error: command 'gcc' failed with exit status 1
+
+----------------------------------------
+Command /Users/stephenhartley/virtualenvs/anadusis/bin/python -c "import setuptools; __file__='/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py'; execfile('/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py')" install --single-version-externally-managed --record /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-i70U4G-record/install-record.txt --install-headers /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/lib/include failed with error code 1
+Exception information:
+Traceback (most recent call last):
+  File "/Users/stephenhartley/virtualenvs/anadusis/lib/python2.6/site-packages/pip-0.4.1devdev-py2.6.egg/pip.py", line 288, in main
+    self.run(options, args)
+  File "/Users/stephenhartley/virtualenvs/anadusis/lib/python2.6/site-packages/pip-0.4.1devdev-py2.6.egg/pip.py", line 465, in run
+    requirement_set.install(install_options)
+  File "/Users/stephenhartley/virtualenvs/anadusis/lib/python2.6/site-packages/pip-0.4.1devdev-py2.6.egg/pip.py", line 2231, in install
+    requirement.install(install_options)
+  File "/Users/stephenhartley/virtualenvs/anadusis/lib/python2.6/site-packages/pip-0.4.1devdev-py2.6.egg/pip.py", line 1697, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/Users/stephenhartley/virtualenvs/anadusis/lib/python2.6/site-packages/pip-0.4.1devdev-py2.6.egg/pip.py", line 3852, in call_subprocess
+    % (command_desc, proc.returncode))
+InstallationError: Command /Users/stephenhartley/virtualenvs/anadusis/bin/python -c "import setuptools; __file__='/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py'; execfile('/var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-GiP3uF-build/setup.py')" install --single-version-externally-managed --record /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/-Tmp-/pip-i70U4G-record/install-record.txt --install-headers /var/folders/KI/KIGvv10aFciTkOwe0o0ZxU+++TI/lib/include failed with error code 1
