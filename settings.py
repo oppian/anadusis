@@ -114,8 +114,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, "templates").replace('\\','/'),,
-    os.path.join(PINAX_ROOT, "templates", PINAX_THEME).replace('\\','/'),,
+    os.path.join(PROJECT_ROOT, "templates").replace('\\','/'),
+    os.path.join(PINAX_ROOT, "templates", PINAX_THEME).replace('\\','/'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -212,7 +212,8 @@ INSTALLED_APPS = (
 # fixture
 FIXTURE_DIRS = (
     os.path.join(PROJECT_ROOT, "fixtures"),
-
+	)
+	
 ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda o: "/profiles/profile/%s/" % o.username,
 }
@@ -255,7 +256,8 @@ INTERNAL_IPS = (
 
 BUILD_IGNORE = (
     os.path.normpath(os.path.join(MEDIA_ROOT, 'upload')),
-
+	)
+	
 ugettext = lambda s: s
 LANGUAGES = (
     ('en', u'English'),
