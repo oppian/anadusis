@@ -205,6 +205,8 @@ INSTALLED_APPS = (
     'topics',
     'groups',
     
+    'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
+    
     # build tools
     'build',
 )

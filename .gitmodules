@@ -1,0 +1,3 @@
+[submodule "lib/django-chronograph"]
+	path = lib/django-chronograph
+	url = git://github.com/t11e/django-chronograph.git
