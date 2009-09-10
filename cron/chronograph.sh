@@ -8,4 +8,4 @@ PROJECT_ROOT=/sites/anadusis
 
 cd $PROJECT_ROOT
 mkdir -p logs
-python manage.py cron >> $PROJECT_ROOT/logs/cron_mail.log 2>&1manage.py cron
+python manage.py cron >> $PROJECT_ROOT/logs/cron_mail.log 2>&1
