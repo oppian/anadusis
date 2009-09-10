@@ -24,5 +24,33 @@
             "name": "lab.oppian.com",
             "domain": "lab.oppian.com"
         }
+    },
+    {
+    	"pk": 1,
+    	"model": "chronograph.job",
+    	"fields": {
+    		"next_run": "2009-09-10 10:11:52", 
+    		"name": "send_mail", 
+    		"args": "", 
+    		"disabled": false, 
+    		"frequency": "MINUTELY", 
+    		"command": "send_mail", 
+    		"is_running": false, 
+    		"params": ""
+    	}
+    },
+    {
+    	"pk": 2, 
+    	"model": "chronograph.job",
+    	"fields": {
+    		"next_run": "2009-09-10 10:31:27", 
+    		"name": "retry_deferred", 
+    		"args": "", 
+    		"disabled": false,
+    		"frequency": "MINUTELY",
+    		"command": "retry_deferred",
+    		"is_running": false,
+    		"params": "interval:20"
+    	}
     }
 ]
