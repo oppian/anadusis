@@ -20,10 +20,11 @@ SERVE_MEDIA = DEBUG
 
 ADMINS = (
     ('Stephen Hartley', 'steve@oppian.com'),
+    ('Lighthouse', 'ticket+oppian.37141-t3xa7ysc@lighthouseapp.com'),
 )
 
 # Default admin account and pass
-# admin:merene54
+# admin:dewnwerd7
 
 MANAGERS = ADMINS
 

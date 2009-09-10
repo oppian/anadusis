@@ -4,3 +4,4 @@
 .sqlite.db
 templates/VERSION.txt
 pip-log.txt
+local_settings.py
