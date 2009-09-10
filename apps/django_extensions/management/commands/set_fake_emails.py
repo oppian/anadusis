@@ -11,7 +11,7 @@ from optparse import make_option
 from django.conf import settings
 from django.core.management.base import NoArgsCommand, CommandError
 
-DEFAULT_FAKE_EMAIL = '%(username)s@example.com'
+DEFAULT_FAKE_EMAIL = '%(username)s@oppian.com'
 
 class Command(NoArgsCommand):
     option_list = NoArgsCommand.option_list + (
