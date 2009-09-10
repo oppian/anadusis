@@ -1,1 +1,1 @@
-* * * * * @APP_OWNER@ @DEPLOY_DIR@/manage.py cron
+* * * * * @APP_OWNER@ @DEPLOY_DIR@/cron/chronograph.sh
