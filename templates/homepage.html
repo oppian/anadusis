@@ -8,22 +8,12 @@
 {% block tab_id %}id="home_tab"{% endblock %}
 
 {% block body %}
-    <h1>{% trans "Welcome to Pinax" %}</h1>
+    <h1>{% trans "Welcome to Oppian Labs" %}</h1>
     
     <p>
         {% blocktrans %}
-        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
-        project intended to provide a starting point for websites. By
-        integrating numerous reusable Django apps to take care of the
-        things that many sites have in common, it lets you focus on what
-        makes your site different.
-        {% endblocktrans %}
-    </p>
-    
-    <p>
-        {% blocktrans %}
-        For more information about Pinax, see
-        <a href="http://pinaxproject.com/">http://pinaxproject.com/</a>.
+        <b>Oppian Labs</b> is a place where <a href="http://dev.oppian.com/">Oppian Systems Ltd</a> and its partner
+        <a href="http://tomsawyereffect.wordpress.com/">Tom Sawyer Effect</a> are experimenting with social networking.
         {% endblocktrans %}
     </p>
     
@@ -31,18 +21,17 @@
     
     <p>
         {% blocktrans %}
-        This project demonstrates a social networking site. It provides
+        This project is to investigate new ways to interact and engage with consumers to get 
+        them more integrated into the product creation, marketing and advertising.
+
+        On this site, a number of social networking features are used: 
         profiles, friends, photos, blogs, tribes, wikis, tweets, bookmarks,
         swaps, locations and user-to-user messaging.
         {% endblocktrans %}
     </p>
-    <p>
-        {% blocktrans %}
-        In 0.5 this was called "complete_project".
-        {% endblocktrans %}
-    </p>
     
     <hr />
+    
     {% if user.is_authenticated %}
         {% url what_next as what_next_url %}
         <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}">What Next</a>?{% endblocktrans %}</p>
