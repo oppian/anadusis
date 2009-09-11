@@ -49,7 +49,7 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-GB'
 
 SITE_ID = 1
-SITE_NAME = 'Lab'
+SITE_NAME = "Oppian Lab"
 # work out the domain name
 # for local debugging on ports other than 80, this should be overridden in settings_local.py 
 import socket
@@ -249,7 +249,6 @@ AWS_BUILD_BUCKET_NAME = '%s-django' % BUILD_APPNAME
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
 CONTACT_EMAIL = "info@oppian.com"
-SITE_NAME = "Pinax"
 LOGIN_URL = "/account/login/"
 LOGIN_REDIRECT_URLNAME = "what_next"
 
