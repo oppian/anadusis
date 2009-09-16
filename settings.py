@@ -205,7 +205,8 @@ INSTALLED_APPS = (
     'tag_app',
     'tagging_utils',
     'topics',
-    #'groups',
+    'groups',
+    'basic_groups',
     
     'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
     
