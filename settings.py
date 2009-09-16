@@ -19,8 +19,6 @@ TEMPLATE_DEBUG = DEBUG
 SERVE_MEDIA = DEBUG
 
 ADMINS = (
-    ('Stephen Hartley', 'steve@oppian.com'),
-    ('Lighthouse', 'ticket+oppian.37141-t3xa7ysc@lighthouseapp.com'),
 )
 
 # Default admin account and pass
@@ -201,10 +199,13 @@ INSTALLED_APPS = (
     'account',
     'signup_codes',
     'tribes',
+    'tasks',
+    'projects',
     'photos',
     'tag_app',
+    'tagging_utils',
     'topics',
-    'groups',
+    #'groups',
     
     'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
     
