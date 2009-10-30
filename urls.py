@@ -35,10 +35,10 @@ urlpatterns = patterns('',
     url(r'^$', direct_to_template, {
         "template": "homepage.html",
     }, name="home"),
-    
+
     url(r'^admin/invite_user/$', 'signup_codes.views.admin_invite_user', name="admin_invite_user"),
     url(r'^account/signup/$', signup_view, name="acct_signup"),
-    
+
     (r'^about/', include('about.urls')),
     (r'^account/', include('account.urls')),
     (r'^openid/(.*)', PinaxConsumer()),
@@ -63,10 +63,9 @@ urlpatterns = patterns('',
     (r'^admin/(.*)', admin.site.root),
     (r'^photos/', include('photos.urls')),
     (r'^avatar/', include('avatar.urls')),
-    (r'^swaps/', include('swaps.urls')),
     (r'^flag/', include('flag.urls')),
     (r'^locations/', include('locations.urls')),
-    
+
     (r'^feeds/tweets/(.*)/$', 'django.contrib.syndication.views.feed', tweets_feed_dict),
     (r'^feeds/posts/(.*)/$', 'django.contrib.syndication.views.feed', blogs_feed_dict),
     (r'^feeds/bookmarks/(.*)/?$', 'django.contrib.syndication.views.feed', bookmarks_feed_dict),

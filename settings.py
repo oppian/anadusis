@@ -113,8 +113,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, "templates").replace('\\','/'),
-    os.path.join(PINAX_ROOT, "templates", PINAX_THEME).replace('\\','/'),
+    os.path.join(PROJECT_ROOT, "templates").replace('\\', '/'),
+    os.path.join(PINAX_ROOT, "templates", PINAX_THEME).replace('\\', '/'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -123,9 +123,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
-    
+
     "pinax.core.context_processors.pinax_settings",
-    
+
     "notification.context_processors.notification",
     "announcements.context_processors.site_wide_announcements",
     "account.context_processors.openid",
@@ -151,13 +151,13 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.humanize',
     'django.contrib.markup',
-    
+
     # 3rd party
     'pinax.templatetags',
-    
+
     # Django Custom Management Command Extensions
     # http://code.google.com/p/django-command-extensions/
-	
+
     # external
     'notification', # must be first
     'django_openid',
@@ -175,7 +175,6 @@ INSTALLED_APPS = (
     'threadedcomments',
     'threadedcomments_extras',
     'wiki',
-    'swaps',
     'timezones',
     'voting',
     'voting_extras',
@@ -191,7 +190,7 @@ INSTALLED_APPS = (
     'uni_form',
     'django_sorting',
     'django_markup',
-    
+
     # internal (for now)
     'analytics',
     'profiles',
@@ -207,9 +206,9 @@ INSTALLED_APPS = (
     'topics',
     'groups',
     'basic_groups',
-    
+
     'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
-    
+
     # build tools
     'build',
 )
@@ -217,8 +216,8 @@ INSTALLED_APPS = (
 # fixture
 FIXTURE_DIRS = (
     os.path.join(PROJECT_ROOT, "fixtures"),
-	)
-	
+)
+
 ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda o: "/profiles/profile/%s/" % o.username,
 }
@@ -260,8 +259,8 @@ INTERNAL_IPS = (
 
 BUILD_IGNORE = (
     os.path.normpath(os.path.join(MEDIA_ROOT, 'upload')),
-	)
-	
+)
+
 ugettext = lambda s: s
 LANGUAGES = (
     ('en', u'English'),
