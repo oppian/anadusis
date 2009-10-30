@@ -11,6 +11,7 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 
 ADMINS = (
     ('Stephen Hartley', 'steve@oppian.com'),
+    ('Matthew Jacobi', 'matt@oppian.com'),
     ('Lighthouse', 'ticket+oppian.37141-t3xa7ysc@lighthouseapp.com'),
 )
 
