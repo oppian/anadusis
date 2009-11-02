@@ -22,7 +22,14 @@ fi
 ## get file s3
 s3cmd get $DB_BACKUP_BUCKET:$DB_RESTORE_FILE /tmp/$DB_RESTORE_FILE
 
+## dropdb and create
+sudo -u postgres dropdb $DB_NAME
+sudo -u postgres createdb -O $DB_USER $DB_NAME
+
 ## restore
-sudo -u postgres pg_restore --clean --dbname=$DB_NAME /tmp/$DB_RESTORE_FILE
+sudo -u postgres pg_restore --dbname=$DB_NAME /tmp/$DB_RESTORE_FILE
+
+## restart apache
+/etc/init.d/apache2 restart
 
 exit 0
