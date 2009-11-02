@@ -8,26 +8,34 @@
 {% block tab_id %}id="home_tab"{% endblock %}
 
 {% block body %}
-    <h1>{% trans "Welcome to the Oppian Lab" %}</h1>
+    <h1>{% trans "Welcome to the Co-Lab" %}</h1>
     
     <p>
         {% blocktrans %}
-        The <b>Oppian Lab</b> is a place where <a href="http://dev.oppian.com/">Oppian Systems Ltd</a> and its partner
-        <a href="http://tomsawyereffect.wordpress.com/">Tom Sawyer Effect</a> are experimenting with social networking.
+        The <b>Co-Lab</b> is a place where <a href="http://www.oppian.com/">Oppian Systems Ltd</a>,
+        <a href="http://tomsawyereffect.wordpress.com/">Tom Sawyer Effect</a> 
+        and <a href="http://hellounity.com/">Unity</a>
+        are experimenting with social networking.
         {% endblocktrans %}
     </p>
     
     <h2>{% trans "About this project" %}</h2>
     
     <p>
-        {% blocktrans %}
         This project is to investigate new ways to interact and engage with consumers to get 
         them more integrated into the product creation, marketing and advertising.
 
         On this site, a number of social networking features are used: 
-        profiles, friends, photos, blogs, tribes, wikis, tweets, bookmarks,
-        swaps, locations and user-to-user messaging.
-        {% endblocktrans %}
+        <a href="{% url profile_detail user %}">profiles</a>, 
+        friends, 
+        <a href="{% url photos %}">photos</a>, 
+        <a href="{% url blog_list_all %}">blogs</a>, 
+        <a href="{% url tribe_list %}">tribes</a>, 
+        wikis, 
+        <a href="{% url tweets_you_follow %}">tweets</a>, 
+        <a href="{% url all_bookmarks %}">bookmarks</a>,
+        <a href="{% url loc_yours %}">locations</a> and 
+        user-to-user messaging.
     </p>
     
     <hr />
