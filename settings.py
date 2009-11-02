@@ -277,7 +277,8 @@ SERVER_EMAIL = '"%s" <anadusis@oppian.com>' % socket.gethostname()
 # default from address for normal email
 DEFAULT_FROM_EMAIL = 'anadusis@oppian.com'
 
-# URCHIN_ID = "ua-..."
+# google analytics
+URCHIN_ID = "UA-11393857-2"
 
 YAHOO_MAPS_API_KEY = "..."
 

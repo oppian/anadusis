@@ -9,6 +9,9 @@ DATABASE_PASSWORD = 'bewmen69'         # Not used with sqlite3.
 DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
+# google analytics
+URCHIN_ID = "UA-11393857-1"
+
 ADMINS = (
     ('Stephen Hartley', 'steve@oppian.com'),
     ('Matthew Jacobi', 'matt@oppian.com'),
