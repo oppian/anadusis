@@ -47,7 +47,7 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-GB'
 
 SITE_ID = 1
-SITE_NAME = "Oppian Lab"
+SITE_NAME = "Co-Lab"
 # work out the domain name
 # for local debugging on ports other than 80, this should be overridden in settings_local.py 
 import socket
@@ -238,16 +238,16 @@ NOTIFICATION_LANGUAGE_MODULE = 'account.Account'
 AWS_ACCESS_KEY_ID = 'AKIAI5KRE2OCDICYSLFA'
 AWS_SECRET_ACCESS_KEY = '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'
 
-ACCOUNT_OPEN_SIGNUP = True
-ACCOUNT_REQUIRED_EMAIL = False
-ACCOUNT_EMAIL_VERIFICATION = False
+ACCOUNT_OPEN_SIGNUP = False
+ACCOUNT_REQUIRED_EMAIL = True
+ACCOUNT_EMAIL_VERIFICATION = True
 
 # build
-BUILD_VERSION = ('0', '1')
+BUILD_VERSION = ('0', '2')
 BUILD_APPNAME = 'anadusis'
 AWS_BUILD_BUCKET_NAME = '%s-django' % BUILD_APPNAME
 
-EMAIL_CONFIRMATION_DAYS = 2
+EMAIL_CONFIRMATION_DAYS = 3
 EMAIL_DEBUG = DEBUG
 CONTACT_EMAIL = "info@oppian.com"
 LOGIN_URL = "/account/login/"
