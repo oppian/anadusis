@@ -259,6 +259,7 @@ INTERNAL_IPS = (
 
 BUILD_IGNORE = (
     os.path.normpath(os.path.join(MEDIA_ROOT, 'upload')),
+    os.path.normpath(os.path.join(PROJECT_ROOT, 'pinax-env')),
 )
 
 ugettext = lambda s: s
