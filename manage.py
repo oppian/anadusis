@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 
-from os.path import join
+from os.path import abspath, dirname, join
 
 try:
     import pinax

@@ -76,6 +76,7 @@ STATIC_URL = '/site_media/static/'
 # Additional directories which hold static files
 STATICFILES_DIRS = (
     ('anadusis', os.path.join(PROJECT_ROOT, 'media')),
+    ('social_project', os.path.join(PROJECT_ROOT, 'media')),
     ('pinax', os.path.join(PINAX_ROOT, 'media', PINAX_THEME)),
 )
 
@@ -104,17 +105,15 @@ MIDDLEWARE_CLASSES = (
     'django_sorting.middleware.SortingMiddleware',
     'djangodblog.middleware.DBLogMiddleware',
     'pinax.middleware.security.HideSensistiveFieldsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.transaction.TransactionMiddleware',
 )
 
 ROOT_URLCONF = 'urls' # anadusis.urls
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, "templates").replace('\\', '/'),
-    os.path.join(PINAX_ROOT, "templates", PINAX_THEME).replace('\\', '/'),
+    os.path.join(PROJECT_ROOT, "templates"),
+    os.path.join(PINAX_ROOT, "templates", PINAX_THEME),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -123,9 +122,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
-
+    
     "pinax.core.context_processors.pinax_settings",
-
+    
     "notification.context_processors.notification",
     "announcements.context_processors.site_wide_announcements",
     "account.context_processors.openid",
@@ -143,21 +142,15 @@ COMBINED_INBOX_COUNT_SOURCES = (
 
 INSTALLED_APPS = (
     # included
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
     'django.contrib.humanize',
     'django.contrib.markup',
-
-    # 3rd party
     'pinax.templatetags',
-
-    # Django Custom Management Command Extensions
-    # http://code.google.com/p/django-command-extensions/
-
+    
     # external
     'notification', # must be first
     'django_openid',
@@ -190,11 +183,12 @@ INSTALLED_APPS = (
     'uni_form',
     'django_sorting',
     'django_markup',
-
+    'staticfiles',
+    'debug_toolbar',
+    
     # internal (for now)
     'analytics',
     'profiles',
-    'staticfiles',
     'account',
     'signup_codes',
     'tribes',

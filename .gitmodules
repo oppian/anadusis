@@ -1,3 +1,6 @@
 [submodule "lib/django-chronograph"]
 	path = lib/django-chronograph
 	url = git://github.com/t11e/django-chronograph.git
+[submodule "lib\\pinax"]
+	path = lib\\pinax
+	url = git://github.com/pinax/pinax.git

@@ -34,11 +34,14 @@ chmod +x cron/chronograph.sh
 
 ## setup the virtualenv
 echo "Setting up virtualenv $DEPLOY_DIR/../pinax-env"
-python lib/pinax/scripts/pinax-boot.py ../pinax-env
+python lib/pinax/scripts/pinax-boot.py --development --source=lib/pinax ../pinax-env
 
 ## and make sure we are using it
 echo "Activating virtualenv $DEPLOY_DIR/../pinax-env"
 source ../pinax-env/bin/activate
+
+## install deps for dev version
+pip install --no-deps --requirement lib/pinax/requirements/external_apps.txt
 
 ## upgrade to django 1.1
 pip install -U Django==1.1.1
