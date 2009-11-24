@@ -202,6 +202,8 @@ INSTALLED_APPS = (
     'basic_groups',
 
     'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
+    
+    'tinymce', # http://django-tinymce.googlecode.com/svn/trunk/docs/.build/html/index.html
 
     # build tools
     'build',
@@ -305,6 +307,18 @@ WIKI_REQUIRES_LOGIN = True
 # Uncomment this line after signing up for a Yahoo Maps API key at the
 # following URL: https://developer.yahoo.com/wsregapp/
 # YAHOO_MAPS_API_KEY = ''
+
+# TINYMCE
+TINYMCE_JS_URL =  '%stinymce/tiny_mce.js' % STATIC_URL
+TINYMCE_JS_ROOT = '%s/apps/tinymce/media/tinymce/tinymce' % PROJECT_ROOT
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.
