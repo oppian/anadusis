@@ -258,6 +258,7 @@ BUILD_IGNORE = (
     os.path.normpath(os.path.join(PROJECT_ROOT, 'pinax-env')),
     os.path.normpath(os.path.join(PROJECT_ROOT, 'support files')),
     os.path.normpath(os.path.join(PROJECT_ROOT, 'rightscripts')),
+    os.path.normpath(os.path.join(MEDIA_ROOT, 'avatars')),
 )
 
 ugettext = lambda s: s
