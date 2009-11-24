@@ -310,14 +310,14 @@ WIKI_REQUIRES_LOGIN = True
 
 # TINYMCE
 TINYMCE_JS_URL =  '%stinymce/tiny_mce.js' % STATIC_URL
-TINYMCE_JS_ROOT = '%s/apps/tinymce/media/tinymce/tinymce' % PROJECT_ROOT
+TINYMCE_JS_ROOT = '%s/apps/tinymce/media/tinymce' % PROJECT_ROOT
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace",
+#    'plugins': "table,spellchecker,paste,searchreplace",
     'theme': "advanced",
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 10,
+#    'cleanup_on_startup': True,
+#    'custom_undo_redo_levels': 10,
 }
-TINYMCE_SPELLCHECKER = True
+TINYMCE_SPELLCHECKER = False
 TINYMCE_COMPRESSOR = True
 
 # local_settings.py can be used to override environment-specific settings
