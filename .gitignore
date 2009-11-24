@@ -9,4 +9,4 @@ templates/VERSION.txt
 pip-log.txt
 local_settings.py
 pinax-env/**
-site_meda/media/avatars/**
+site_media/media/avatars/
