@@ -8,6 +8,7 @@
 from django.conf.urls.defaults import *
 from videostream.models import VideoStream
 from videostream.feeds import LatestStream
+from views import *
 
 videostream_info_dict = {
     'queryset': VideoStream.objects.filter(is_public=True),
@@ -31,10 +32,12 @@ feeds = {
     'latest':  LatestStream,        
 }
 
-urlpatterns = patterns ('django.views.generic.date_based',
-    (r'^$', 'archive_index', 
-                videostream_info_dict, 
-                'videos'),
+urlpatterns = patterns('',
+    url(r'^$', latest, name='videos'),
+    url(r'^owned/$', owned, name='videos_owned'),
+)
+
+urlpatterns += patterns ('django.views.generic.date_based',
     (r'^(?P<year>\d{4})/$', 
                 'archive_year', 
                 videostream_info_year_dict,

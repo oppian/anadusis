@@ -8,8 +8,9 @@
 {% block subnav %}
     {% if user.is_authenticated %}
         <ul>
-            <li><a href="#">{% trans "Latest Videos" %}</a></li>
-            <li><a href="#">{% trans "Your Videos" %}</a></li>
+            <li><a href="{% url videos %}">{% trans "Latest Videos" %}</a></li>
+            <li><a href="{% url videos_owned %}">{% trans "Your Videos" %}</a></li>
+            <li><a href="#">{% trans "Friends' Videos" %}</a></li>
             <li><a href="#">{% trans "Upload a Video" %}</a></li>
         </ul>
     {% else %}

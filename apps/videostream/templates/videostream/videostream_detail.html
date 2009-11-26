@@ -1,4 +1,8 @@
-{% extends "site_base.html" %}
+{% extends "videostream/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Video" %} - {{ object.title }}{% endblock %}
 
 {% block extra_head %}
 	<script type="text/javascript" src="{{ STATIC_URL }}flowplayer/flowplayer-3.1.4.min.js"></script>
@@ -7,14 +11,14 @@
 {% block body %}
 {% if object %}
     <h1>{{ object.title }}</h1>
-    <p class="byline">by {{ object.author.first_name }} - {{ object.pub_date|date:"d M Y" }}</p>
-    <p>{{ object.description }}</p>
     <a href="{{ object.flvfile.url }}"
         style="display: block; {{ object.get_player_size }}"
        id="player"> </a>
     <script language="JavaScript"> 
     	flowplayer("player", "{{ STATIC_URL }}flowplayer/flowplayer-3.1.5.swf"); 
 	</script>
+	<p class="byline">by <a href="{% url profile_detail object.author.username %}">{{ object.author }}</a> - {{ object.pub_date|date:"d M Y" }}</p>
+	<p>{{ object.description }}</p>
 {% else %}
     <h2>Clip not found</h2>
     <p>Sorry, but the clip you are looking for does not seem to exist</p>
