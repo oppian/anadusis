@@ -52,5 +52,19 @@
     		"is_running": false,
     		"params": "interval:20"
     	}
+    },
+    {
+    	"pk": 3,
+    	"model": "chronograph.job",
+    	"fields": {
+    		"next_run": "2009-09-10 10:11:52", 
+    		"name": "encode", 
+    		"args": "", 
+    		"disabled": false, 
+    		"frequency": "MINUTELY", 
+    		"command": "encode", 
+    		"is_running": false, 
+    		"params": ""
+    	}
     }
 ]

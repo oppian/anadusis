@@ -2,29 +2,37 @@
 
 {% load i18n %}
 {% load pagination_tags %}
-{% load avatar_tags %}
+{% load group_tags %}
+{% load theme_tags %}
+{% load comments_tag %}
+{% load threadedcommentstags %}
 
 {% block head_title %}{% blocktrans %}Latest Videos{% endblocktrans %}{% endblock %}
 
 {% block body %}
-<h1>{% trans "Latest Videos" %}</h1>
-
-{% if latest %}
-{% autopaginate latest %}
-<div class="Listing">
-    {% for video in latest %}
-    <hr/>
-    <div class="{% cycle 'odd' 'even' %}">
-        <h2><a href="{{ video.get_absolute_url }}">{{ video.title }}</a></h2>
-        <a href="{{ video.get_absolute_url }}"><img class="fright" src="{{ video.thumbnail.url }}" /></a><br/>
-        <small class="byline"><div class="video-avatar">{% avatar video.author.username 50 %}</div><a href="{% url profile_detail video.author.username %}">{{ video.author }}</a>&nbsp;-&nbsp;{{ video.pub_date|date:"d M Y" }}</small>
-        <p>{{ video.description }}</p>
-        <p><a href="{{ video.get_absolute_url }}">View now...</a></p>
-    </div>
-    {% endfor %}
-</div>
-{% paginate %}
-{% else %}
-<p>Sorry, there are no video entries at this time</p>
-{% endif %}
+	<h1>{% trans "Latest Videos" %}</h1>
+	
+	{% if videos %}
+		{% autopaginate videos %}
+		<div class="Listing">
+		    {% for video in videos %}
+			    <hr/>
+			    <div class="{% cycle 'odd' 'even' %}">
+			        <h2><a href="{% groupurl video_details group slug=video.slug %}">{{ video.title }}</a></h2>
+			        {% if video.thumbnail %}
+			        	<div class="video-thumb"><a href="{% groupurl video_details group slug=video.slug %}"><img src="{{ video.thumbnail.url }}" /></a></div>
+			        {% else %}
+			        	<div class="video-notready">Video not yet ready.</div>
+			        {% endif %}
+			        <div class="video-author">{{ video.author }}</div>
+			        <div class="video-date">{{ video.date_added|date:"d M Y" }}</div>
+			        {% silk "comment" %}<a href="{% groupurl video_details group slug=video.slug %}/#videocomments">{% get_comment_count for video as commentcount %} {{ commentcount }} Comments</a><br />
+			        Viewed {{ video.view_count }} times
+			    </div>
+		    {% endfor %}
+		</div>
+		{% paginate %}
+	{% else %}
+		<p>Sorry, there are no video entries at this time</p>
+	{% endif %}
 {% endblock %}

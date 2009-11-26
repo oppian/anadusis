@@ -11,7 +11,7 @@
             <li><a href="{% url videos %}">{% trans "Latest Videos" %}</a></li>
             <li><a href="{% url videos_yours %}">{% trans "Your Videos" %}</a></li>
             <li><a href="{% url videos_friends %}">{% trans "Friends' Videos" %}</a></li>
-            <li><a href="#">{% trans "Upload a Video" %}</a></li>
+            <li><a href="{% url videos_upload %}">{% trans "Upload a Video" %}</a></li>
         </ul>
     {% else %}
         &nbsp;

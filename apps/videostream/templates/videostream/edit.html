@@ -1,0 +1,48 @@
+{% extends "videostream/base.html" %}
+
+{% load i18n %}
+{% load uni_form %}
+
+{% block head_title %}{% blocktrans %}Editing Video Details{% endblocktrans %}{% endblock %}
+
+{% block body %}
+    
+    <div class="right_panel">
+        {% include "videostream/right_panel.html" %}
+    </div>
+    
+    <h1>{% trans "Video Details" %}</h1>
+    
+    {% if video.flvfile %}
+        <div class="video">
+            <a href="{{ video.flvfile.url }}" style="display: block; {{ video.get_player_size }}" id="player"></a>
+        </div>
+	{% else %}
+		<div class="video-notready">Video not ready.</div>
+	{% endif %}
+    
+    {% ifequal video.author request.user %}
+	    <form class="uniForm" id="edit-video" method="POST" enctype="multipart/form-data" action="">
+	        <fieldset class="inlineLabels">
+	            {{ video_form|as_uni_form }}
+	            <div class="form_block">
+	                <input type="hidden" name="action" value="update" />
+	                <input type="submit" value="{% trans "Update" %}" />
+	            </div>
+	        </fieldset>
+	    </form>
+    {% else %}
+        <p>You are not the author of this video.</p>
+    {% endifequal %}
+    
+{% endblock %}
+
+
+{% block extra_body %}
+	<script type="text/javascript" src="{{ STATIC_URL }}flowplayer/flowplayer-3.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        	flowplayer("player", "{{ STATIC_URL }}flowplayer/flowplayer-3.1.5.swf");
+        });
+    </script>
+{% endblock %}

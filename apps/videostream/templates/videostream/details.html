@@ -1,0 +1,77 @@
+{% extends "videostream/base.html" %}
+
+{% load i18n %}
+{% load comments_tag %}
+{% load flagtags %}
+{% load theme_tags %}
+
+{% block head_title %}{% blocktrans %}Video{% endblocktrans %} - {{ video.title }}{% endblock %}
+
+{% block body %}
+  
+    <div class="right_panel">
+        {% include "videostream/right_panel.html" %}
+    </div>
+    
+    <div class="left_panel">
+    <h1>{% trans "Video Details" %}</h1>
+    
+    {% if video.flvfile %}
+        <div class="video">
+            <a href="{{ video.flvfile.url }}" style="display: block; {{ video.get_player_size }}" id="player"></a>
+        </div>
+	{% else %}
+		<div class="video-notready">Video not ready.</div>
+	{% endif %}
+    <div class="video-title">
+        <h2>{{ video.title }}</h2>
+    </div>
+    <div class="video-caption">
+        <p>{{ video.description }}</p>
+    </div>
+        
+    <div class="form-toggle">
+        <p><span id="flag-toggle">{% silk "flag_red" %}{% trans "Flag as inappropriate" %}</span></p>
+         <div id="flag-form" style="display: none;">
+            {% flag video request.user.id %}
+         </div>
+    </div>
+    
+    {% if video.enable_comments %}
+	    <h3>Comments on This Video:</h3>
+	    {% comments video %}
+	{% endif %}
+	
+    </div>
+    
+{% endblock %}
+
+
+{% block extra_body %}
+	<script type="text/javascript" src="{{ STATIC_URL }}flowplayer/flowplayer-3.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        	flowplayer("player", "{{ STATIC_URL }}flowplayer/flowplayer-3.1.5.swf");
+        	 
+            $('#flag-form').hide();
+            $('#flag-toggle').click(function() {
+                $('#flag-form').slideToggle();
+                $('#flag-form').autoscroll();
+                return false;
+            });
+            if ($('#flag-form ul.errorlist').length) {
+                $('#flag-form').show();
+                $('#flag-form ul.errorlist').autoscroll();
+            }
+            
+        });
+        
+        $(document).ready(function() {
+            $('#embed-code').hide();
+            $('#embed-code-toggle').click(function() {
+                $('#embed-code').toggle();
+                return false;
+            })
+        });
+    </script>
+{% endblock %}

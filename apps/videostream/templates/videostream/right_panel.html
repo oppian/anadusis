@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load avatar_tags %}
+{% load tagging_tags %}
+{% load group_tags %}
+{% load theme_tags %}
+
+<div class="video-right-profile clearfix">
+    <div class="video-avatar">{% avatar video.author.username 50 %}</div>
+    <div class="video-profile-details">
+        <h2>Uploaded By</h2>
+        <a href="{% url profile_detail video.author.username %}" title="{{ video.author.username }}">{{ video.author.username }}</a><br />
+        {{ video.date_added|date }}<br />
+        Viewed {{ video.view_count }} times
+    </div>
+</div>
+
+<div class="video-right-tools">
+    {% if video.tags %}
+        <h2>{% silk "tag_blue" %} Tags</h2>
+        <ul>
+            {% tags_for_object video as tags %}
+            {% for tag in tags %}
+                <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    {% if is_me %}
+        <form action="{% groupurl video_destroy group id=video.id %}" method="POST">
+            <label>Delete Video</label> <input type="image" src="{{ STATIC_URL }}pinax/images/silk/icons/delete.png" border="0" title="{% trans "Delete Video" %}" />
+                        <input type="hidden" name="action" value="delete"/>
+        </form>
+        
+        <a href="{% groupurl video_edit group slug=video.slug %}">Edit Video</a>
+        
+    {% endif %}
+    
+</div>
+

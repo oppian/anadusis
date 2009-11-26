@@ -10,52 +10,31 @@ from videostream.models import VideoStream
 from videostream.feeds import LatestStream
 from views import *
 
-videostream_info_dict = {
-    'queryset': VideoStream.objects.filter(is_public=True),
-    'date_field': 'pub_date',
-}
-
-videostream_info_year_dict = {
-    'queryset': VideoStream.objects.filter(is_public=True),
-    'date_field': 'pub_date',
-    'make_object_list': True,
-    'allow_empty': True,
-}
-
-videostream_info_monthday_dict = {
-    'queryset': VideoStream.objects.filter(is_public=True),
-    'date_field': 'pub_date',
-    'allow_empty': True,
-}
 
 feeds = {
     'latest':  LatestStream,        
 }
 
 urlpatterns = patterns('',
-    url(r'^$', latest, name='videos'),
+    # all videos or latest videos
+    url(r'^$', videos, name='videos'),
+    # a video details
+    url(r'^details/(?P<slug>.*)/$', details, name="video_details"),
+    # upload videos
+    url(r'^upload/$', upload, name="videos_upload"),
+    # your videos
     url(r'^yourvideos/$', yourvideos, name='videos_yours'),
+    # a members videos
+    url(r'^member/(?P<username>[\w]+)/$', membervideos, name='videos_member'),
+    # destory video
+    url(r'^destroy/(?P<id>\d+)/$', destroy, name='video_destroy'),
+    # edit video
+    url(r'^edit/(?P<slug>.*)/$', edit, name='video_edit'),
+    # friends videos
     url(r'^friends/$', friendsvideo, name='videos_friends'),
+    
 )
 
-urlpatterns += patterns ('django.views.generic.date_based',
-    (r'^(?P<year>\d{4})/$', 
-                'archive_year', 
-                videostream_info_year_dict,
-                'videostream_archive_year'),
-    (r'^(?P<year>\d{4})/(?P<month>\w{3})/$', 
-                'archive_month', 
-                videostream_info_monthday_dict,
-                'videostream_archive_month'),
-    (r'^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/$', 
-                'archive_day', 
-                videostream_info_monthday_dict,
-                'videostream_archive_day'),
-    (r'^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', 
-                'object_detail', 
-                videostream_info_dict,
-                'videostream_detail'),
-)
 
 urlpatterns += patterns('django.contrib.syndication.views',
         (r'^feeds/(?P<url>.*)/$', 'feed', {'feed_dict': feeds}),
