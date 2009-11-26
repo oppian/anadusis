@@ -16,7 +16,7 @@
     <div class="{% cycle 'odd' 'even' %}">
         <h2><a href="{{ video.get_absolute_url }}">{{ video.title }}</a></h2>
         <a href="{{ video.get_absolute_url }}"><img class="fright" src="{{ video.thumbnail.url }}" /></a><br/>
-        <small class="byline"><a href="{% url profile_detail video.author.username %}">{{ video.author }}</a>&nbsp;-&nbsp;{{ video.pub_date|date:"d M Y" }}</small>
+        <small class="byline">{{ video.pub_date|date:"d M Y" }}</small>
         <p>{{ video.description }}</p>
         <p><a href="{{ video.get_absolute_url }}">View now...</a></p>
     </div>

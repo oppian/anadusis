@@ -34,7 +34,8 @@ feeds = {
 
 urlpatterns = patterns('',
     url(r'^$', latest, name='videos'),
-    url(r'^owned/$', owned, name='videos_owned'),
+    url(r'^yourvideos/$', yourvideos, name='videos_yours'),
+    url(r'^friends/$', friendsvideo, name='videos_friends'),
 )
 
 urlpatterns += patterns ('django.views.generic.date_based',
