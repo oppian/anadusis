@@ -34,7 +34,7 @@ feeds = {
 urlpatterns = patterns ('django.views.generic.date_based',
     (r'^$', 'archive_index', 
                 videostream_info_dict, 
-                'videostream_archive_index'),
+                'videos'),
     (r'^(?P<year>\d{4})/$', 
                 'archive_year', 
                 videostream_info_year_dict,

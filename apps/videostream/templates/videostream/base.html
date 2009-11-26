@@ -1,0 +1,18 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pagination_tags %}
+
+{% block body_class %}videos{% endblock %}
+
+{% block subnav %}
+    {% if user.is_authenticated %}
+        <ul>
+            <li><a href="#">{% trans "Latest Videos" %}</a></li>
+            <li><a href="#">{% trans "Your Videos" %}</a></li>
+            <li><a href="#">{% trans "Upload a Video" %}</a></li>
+        </ul>
+    {% else %}
+        &nbsp;
+    {% endif %}
+{% endblock %}
