@@ -59,7 +59,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'site_media', 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'site_media', 'media/')
 
 # URL that handles the media served from MEDIA_ROOT.
 # Example: "http://media.lawrence.com"
@@ -204,6 +204,8 @@ INSTALLED_APPS = (
     'chronograph', # see lib/django-chronograph (originally git://github.com/t11e/django-chronograph.git)
     
     'tinymce', # http://django-tinymce.googlecode.com/svn/trunk/docs/.build/html/index.html
+    
+    'videostream', # http://cloud27.com/projects/project/djangovideo/
 
     # build tools
     'build',

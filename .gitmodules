@@ -4,3 +4,6 @@
 [submodule "lib\\pinax"]
 	path = lib\\pinax
 	url = git://github.com/pinax/pinax.git
+[submodule "lib/django-video"]
+	path = lib/django-video
+	url = git://github.com/winterweaver/django-video.git

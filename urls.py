@@ -73,6 +73,8 @@ urlpatterns = patterns('',
     (r'^feeds/bookmarks/(.*)/?$', 'django.contrib.syndication.views.feed', bookmarks_feed_dict),
     
     (r'^tinymce/', include('tinymce.urls')),
+    
+    ( r'^videos/', include( 'videostream.urls' ) ),
 )
 
 ## @@@ for now, we'll use friends_app to glue this stuff together

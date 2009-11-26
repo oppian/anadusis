@@ -10,3 +10,5 @@ pip-log.txt
 local_settings.py
 pinax-env/**
 site_media/media/avatars/
+site_media/media/videos/
+site_media/media/photologue/
