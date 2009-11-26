@@ -14,7 +14,7 @@ class VideoStreamAdmin(admin.ModelAdmin):
             } 
     fieldsets = [
             ('General', {'fields': ['title', 'slug', 'description']}),
-            ('Publication', {'fields': ['pub_date', 'tags', 'is_public', 'featured', 'enable_comments']}),
+            ('Publication', {'fields': ['author', 'pub_date', 'tags', 'is_public', 'featured', 'enable_comments']}),
             ('Video Files', {'fields': ['videoupload', 'flvfile', 'thumbnail']}),
             ('Encoding Options', {'fields': ['encode']}),
             ]

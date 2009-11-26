@@ -8,6 +8,7 @@
 from django.db import models
 from django.conf import settings
 import datetime
+from django.contrib.auth import models as auth
 
 # use Django-tagging for tags. If Django-tagging cannot be found, create our own
 # I did not author this little snippet, I found it somewhere on the web,
@@ -41,6 +42,7 @@ class VideoStream(models.Model):
     featured = models.BooleanField( default=False )
     tags = TagField( help_text=tagfield_help_text )
     enable_comments = models.BooleanField( default=False )
+    author = models.ForeignKey(auth.User)
 
     # Video File field
     videoupload = models.FileField( upload_to="videos/source/", null=True, blank=True,
