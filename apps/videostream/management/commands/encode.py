@@ -5,18 +5,17 @@
 # Please see the text file LICENCE for more information
 # If this script is distributed, it must be accompanied by the Licence
 
+from django.conf import settings
 from django.core.management.base import NoArgsCommand
+from videostream.lockfile import FileLock, AlreadyLocked, LockTimeout
+from videostream.models import VideoStream
 import commands
 import os
-from videostream.lockfile import FileLock, AlreadyLocked, LockTimeout
 
 class Command(NoArgsCommand):
     def handle_noargs(self, **options):
         """ Encode all pending streams
         """
-        from django.conf import settings
-        from videostream.models import VideoStream
-        
         lock = FileLock("encode")
     
         try:
@@ -29,7 +28,7 @@ class Command(NoArgsCommand):
             MEDIA_ROOT = getattr(settings, 'MEDIA_ROOT')
             VIDEOSTREAM_SIZE = getattr(settings, 'VIDEOSTREAM_SIZE', '320x240')
             VIDEOSTREAM_THUMBNAIL_SIZE = getattr(settings, 'VIDEOSTREAM_THUMBNAIL_SIZE', '320x240')
-    
+            
             videostreams = VideoStream.objects.all().filter(encode=True)
             for stream in videostreams:
                 flvfilename = "%s.flv" % stream.slug
@@ -48,16 +47,30 @@ class Command(NoArgsCommand):
     
                 # ffmpeg command to create flv video
                 #ffmpeg = "ffmpeg -y -i %s -acodec libmp3lame -ar 22050 -ab 32000 -f flv -s %s %s" % (infile, VIDEOSTREAM_SIZE, outfile)
-                ffmpeg = (
-                    "ffmpeg",
-                    "-y",
-                    "-i", infile,
-                    "-acodec", "libmp3lame",
-                    "-ar", "22050",
-                    "-ab", "32000",
-                    "-f", "flv",
-                    "-s", VIDEOSTREAM_SIZE,
-                    outfile,
+#                ffmpeg = (
+#                    "ffmpeg",
+#                    "-y",
+#                    "-i", infile,
+#                    "-acodec", "libmp3lame",
+#                    "-ar", "22050",
+#                    "-ab", "32000",
+#                    "-f", "flv",
+#                    "-s", VIDEOSTREAM_SIZE,
+#                    outfile,
+#                )
+                mencoder = (
+                    "mencoder",
+                    "-forceidx",
+                    "-of", "lavf",
+                    "-oac", "mp3lame",
+                    "-lameopts", "abr:br=56",
+                    "-srate", "22050",
+                    "-ovc", "lavc",
+                    "-lavcopts",
+                    "vcodec=flv:vbitrate=250:mbd=2:mv0:trell:v4mv:cbp:last_pred=3",
+                    "-vf", "scale=%s" % (VIDEOSTREAM_SIZE.replace('x', ':')), 
+                    "-o", outfile,
+                    infile,
                 )
     
                 # ffmpeg command to create the video thumbnail
@@ -74,6 +87,7 @@ class Command(NoArgsCommand):
                     "-s", VIDEOSTREAM_THUMBNAIL_SIZE, 
                     thumbnailfilename
                 )
+
     
                 # flvtool command to get the metadata
                 #flvtool = "flvtool2 -U %s" % outfile
@@ -86,17 +100,18 @@ class Command(NoArgsCommand):
                 print "Output File (full path): %s " % outfile
                 print "Thumbnail Filename: %s" % thumbnailfilename
                 print 80 * "-"
-                print "ffmpeg Command: %s " % ' '.join(ffmpeg)
+                print "mencoder Command: %s " % ' '.join(mencoder)
                 print "Thumbnail Command: %s " % ' '.join(getThumb)
                 print "flvTool Command: %s " % ' '.join(flvtool)
                 print 80 * "-"
                 
                 # Lets do the conversion
                 import subprocess
-                ffmpegresult = subprocess.Popen(ffmpeg, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
-                print "ffmpeg Result:"
+#                ffmpegresult = subprocess.Popen(ffmpeg, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
+                mencoderresult = subprocess.Popen(mencoder, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
+                print "mencoder Result:"
                 print 80 * "-"
-                print ffmpegresult
+                print mencoderresult
     
                 if os.access(outfile, os.F_OK): # File exists
                     if (os.stat(outfile).st_size==0): # There was a error cause the outfile size is zero

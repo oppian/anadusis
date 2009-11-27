@@ -6,7 +6,7 @@
 # $HOSTNAME    -- Hostname of server
 # $APP_OWNER   -- User to chmod the files in deploy dir
 #
-# pkgs: flip
+# pkgs: flip ffmpeg flvtool2 libmp3lame0 libfaad0 mencoder
 
 #
 # Test for a reboot,  if this is a reboot just skip this script.
