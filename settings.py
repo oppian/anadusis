@@ -261,6 +261,8 @@ BUILD_IGNORE = (
     os.path.normpath(os.path.join(PROJECT_ROOT, 'support files')),
     os.path.normpath(os.path.join(PROJECT_ROOT, 'rightscripts')),
     os.path.normpath(os.path.join(MEDIA_ROOT, 'avatars')),
+    os.path.normpath(os.path.join(MEDIA_ROOT, 'videos')),
+    os.path.normpath(os.path.join(MEDIA_ROOT, 'photologue')),
 )
 
 ugettext = lambda s: s
