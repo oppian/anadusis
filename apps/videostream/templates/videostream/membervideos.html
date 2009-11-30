@@ -27,7 +27,7 @@
 		        	<div class="video-notready">Video not yet ready.</div>
 		        {% endif %}
 		        <div class="video-date">{{ video.date_added|date:"d M Y" }}</div>
-		        {% silk "comment" %}<a href="{% groupurl video_details group slug=video.slug %}/#videocomments">{% get_comment_count for video as commentcount %} {{ commentcount }} Comments</a><br />
+		        {% silk "comment" %}<a href="{% groupurl video_details group slug=video.slug %}#videocomments">{% get_comment_count for video as commentcount %} {{ commentcount }} Comments</a><br />
 		        Viewed {{ video.view_count }} times
 		    </div>
 		    {% endfor %}

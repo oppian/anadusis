@@ -26,7 +26,7 @@
 			        {% endif %}
 			        <div class="video-author">{{ video.author }}</div>
 			        <div class="video-date">{{ video.date_added|date:"d M Y" }}</div>
-			        {% silk "comment" %}<a href="{% groupurl video_details group slug=video.slug %}/#videocomments">{% get_comment_count for video as commentcount %} {{ commentcount }} Comments</a><br />
+			        {% silk "comment" %}<a href="{% groupurl video_details group slug=video.slug %}#videocomments">{% get_comment_count for video as commentcount %} {{ commentcount }} Comments</a><br />
 			        Viewed {{ video.view_count }} times
 			    </div>
 		    {% endfor %}
