@@ -1,11 +1,10 @@
-
 import os
 import sys
 
 from os.path import abspath, dirname, join
-from site import addsitedir
 
-VIRTUALENV_BASE = "/sites/pinax-env"
+# activate virtualenv
+VIRTUALENV_BASE = abspath(join(dirname(__file__), '../pinax-env'))
 if not VIRTUALENV_BASE:
     raise Exception("VIRTUALENV_BASE is not set correctly.")
 
@@ -13,6 +12,7 @@ activate_this = join(VIRTUALENV_BASE, "bin/activate_this.py")
 execfile(activate_this, dict(__file__=activate_this))
 
 from django.core.handlers.modpython import ModPythonHandler
+
 
 
 class PinaxModPythonHandler(ModPythonHandler):
@@ -27,6 +27,7 @@ class PinaxModPythonHandler(ModPythonHandler):
         
         sys.path.insert(0, join(settings.PINAX_ROOT, "apps"))
         sys.path.insert(0, join(settings.PROJECT_ROOT, "apps"))
+        
         
         return super(PinaxModPythonHandler, self).__call__(req)
 
