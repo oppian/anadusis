@@ -1,11 +1,10 @@
-#!/bin/sh
+#!/bin/bash
+#   If you aren't using a virtual environment, you might
+#   try sourcing whichever file it is that you define your
+#   PYTHONPATH in (~/.basrc, ~/.bash_profile, etc)
+#
+#   Pass this script one argument: the path to your project.
+#   (The directory in which your manage.py is)
 
-WORKON_HOME=/sites
-PROJECT_ROOT=/sites/anadusis
-
-# activate virtual environment
-. $WORKON_HOME/pinax-env/bin/activate
-
-cd $PROJECT_ROOT
-mkdir -p logs
-python manage.py cron >> $PROJECT_ROOT/logs/cron_mail.log 2>&1
+PROJECT_PATH=$1
+source "$PROJECT_PATH/pinax-env/bin/activate" && cd "$PROJECT_PATH" && python manage.py cron
