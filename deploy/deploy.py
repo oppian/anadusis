@@ -202,34 +202,39 @@ def do_virtualenv(deploy_dir):
     """
     print "Setting up virtual environment"
     # python lib/pinax/scripts/pinax-boot.py --development --source=lib/pinax pinax-env  --django-version=$DJANGO_VERSION
-    _pcall(['python', 'lib/pinax/scripts/pinax-boot.py', '--development', '--source=lib/pinax', '--django-version=%s' % _getenv('DJANGO_VERSION'), 'pinax-env'])
+    # '--django-version=%s' % _getenv('DJANGO_VERSION'),
+    _pcall(['python', 'lib/pinax/scripts/pinax-boot.py', '--development', '--source=lib/pinax', 'pinax-env'])
     # activate it
     activate_this = os.path.join(deploy_dir, "pinax-env/bin/activate_this.py")
     execfile(activate_this, dict(__file__=activate_this))
     os.environ['PATH'] = '%s:%s' % (os.path.join(deploy_dir, 'pinax-env/bin'), _getenv('PATH'))
     # install requirements: pip install --no-deps --requirement requirements.txt
     _pcall(['pip', 'install', '--no-deps', '--requirement', 'requirements.txt'])
+    _pcall(['pip', '-U', 'Django==%s'% _getenv('DJANGO_VERSION')])
+    _pcall(['easy_install', 'boto'])
 
 def do_django(deploy_dir):
     """
     This runs the various django commands to setup the media, database, etc
     """
     print "Running django commands"
-    # media: python manage.py build_static --noinput
-    _pcall(['python', 'manage.py', 'build_static', '--noinput', ])
+    
+    _pcall(['python', 'manage.py', 'build_media', '--all', ])
+
+    _pcall(['sudo', 'apt-get', 'install', 'python-imaging', ])
 
     # syncdb: python manage.py syncdb --noinput
     _pcall(['python', 'manage.py', 'syncdb', '--noinput', ])
 
-    DB_MIGRATE = eval(os.environ.get('DB_MIGRATE', 'False'))
-    if DB_MIGRATE:
+    #DB_MIGRATE = eval(os.environ.get('DB_MIGRATE', 'False'))
+    #if DB_MIGRATE:
         # run custom migrate script
-        if os.path.isfile(os.path.join(deploy_dir, 'deploy/db_migrate.sh')):
-            os.chmod(os.path.join(deploy_dir, 'deploy/db_migrate.sh'), 0775)
-            _pcall([os.path.join(deploy_dir, 'deploy/db_migrate.sh'), ])
-    else:
+    #    if os.path.isfile(os.path.join(deploy_dir, 'deploy/db_migrate.sh')):
+    #        os.chmod(os.path.join(deploy_dir, 'deploy/db_migrate.sh'), 0775)
+    #        _pcall([os.path.join(deploy_dir, 'deploy/db_migrate.sh'), ])
+    #else:
         # run generic migrate: python manage.py migrate --all -v 2
-        _pcall(['python', 'manage.py', 'migrate', '--all', '-v', '2'])
+    #    _pcall(['python', 'manage.py', 'migrate', '--all', '-v', '2'])
 
     # fixtures
     try:
