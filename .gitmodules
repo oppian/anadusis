@@ -6,4 +6,4 @@
 	url = git://github.com/oppianmatt/pinax.git
 [submodule "lib/django-video"]
 	path = lib/django-video
-	url = git://github.com/andrewwebdev/django-video.git
+	url = git://github.com/andrewebdev/django-video.git
