@@ -131,7 +131,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "account.context_processors.account",
     "messages.context_processors.inbox",
     "friends_app.context_processors.invitations",
-    "anadusis.context_processors.combined_inbox_count",
+    "context_processors.combined_inbox_count", #"anadusis.context_processors.combined_inbox_count",
 )
 
 COMBINED_INBOX_COUNT_SOURCES = (
