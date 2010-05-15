@@ -1,0 +1,1 @@
+* * * * * www-data bash ${DEPLOY_DIR}/deploy/chronograph.sh ${DEPLOY_DIR}
