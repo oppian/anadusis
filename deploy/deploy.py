@@ -211,8 +211,8 @@ def do_virtualenv(deploy_dir):
     # install requirements: pip install --no-deps --requirement requirements.txt
     _pcall(['pip', 'install', '--no-deps', '--requirement', 'lib/pinax/requirements/external_apps.txt'])
     _pcall(['pip', 'install', '-U', 'Django==%s'% _getenv('DJANGO_VERSION')])
-    _pcall(['easy_install', 'boto'])
-
+    _pcall(['pip', 'install', '--no-deps', '--requirement', 'requirements.txt'])
+    
 def do_django(deploy_dir):
     """
     This runs the various django commands to setup the media, database, etc

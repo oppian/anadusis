@@ -47,11 +47,7 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-GB'
 
 SITE_ID = 1
-SITE_NAME = "Co-Lab"
-# work out the domain name
-# for local debugging on ports other than 80, this should be overridden in settings_local.py 
-import socket
-SITE_DOMAIN = socket.gethostname()
+SITE_NAME = "CoLab"
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
