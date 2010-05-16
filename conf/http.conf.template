@@ -12,8 +12,8 @@ KeepAlive Off
     LogLevel warn
     
     RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^lab.oppian.com$ [NC]
-    RewriteRule ^(.*)$ http://colab.oppian.com$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^lab.oppian.com$$ [NC]
+    RewriteRule ^(.*)$$ http://colab.oppian.com$$1 [R=301,L]
     
     <Location "/">
         SetHandler python-program
