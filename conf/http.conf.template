@@ -3,12 +3,17 @@ KeepAlive Off
 <VirtualHost *:80>
 
     ServerName $SITE_DOMAIN
+    ServerAlias lab.oppian.com
 
     ServerAdmin admin@oppian.com
     
     CustomLog ${DEPLOY_DIR}/access.log combined
     ErrorLog ${DEPLOY_DIR}/error.log
     LogLevel warn
+    
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^lab.oppian.com$ [NC]
+    RewriteRule ^(.*)$ http://colab.oppian.com$1 [R=301,L]
     
     <Location "/">
         SetHandler python-program
