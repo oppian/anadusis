@@ -119,7 +119,7 @@ def do_database():
     DB_NAME = _getenv('DB_NAME')
     DB_HOST = _getenv('DB_HOST')
     DB_SETUP = eval(_getenv('DB_SETUP'))
-    DB_COPY = os.environ.get('DB_COPY') # defaults to none
+    DB_COPY = eval(os.environ.get('DB_COPY')) # defaults to none
 
     # dev only resets db 
     if DB_SETUP:
