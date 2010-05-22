@@ -6,5 +6,5 @@ boto
 south
 django-defaultsite
 #
-django-groups=0.1-dev1
-django-sorting=0.1
+django-groups==0.1-dev1
+django-sorting==0.1
