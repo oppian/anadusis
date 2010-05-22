@@ -206,6 +206,7 @@ INSTALLED_APPS = (
 
     # build tools
     'build',
+    'south', # http://south.aeracode.org
 )
 
 # fixture
