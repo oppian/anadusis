@@ -18,14 +18,6 @@
         }
     },
     {
-        "pk": 1,
-        "model": "sites.site",
-        "fields": {
-            "name": "lab.oppian.com",
-            "domain": "lab.oppian.com"
-        }
-    },
-    {
     	"pk": 1,
     	"model": "chronograph.job",
     	"fields": {

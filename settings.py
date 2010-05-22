@@ -5,6 +5,7 @@ import os
 import os.path
 import posixpath
 import pinax
+import socket
 
 PINAX_ROOT = os.path.abspath(os.path.dirname(pinax.__file__))
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -47,11 +48,7 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-GB'
 
 SITE_ID = 1
-SITE_NAME = "Co-Lab"
-# work out the domain name
-# for local debugging on ports other than 80, this should be overridden in settings_local.py 
-import socket
-SITE_DOMAIN = socket.gethostname()
+SITE_NAME = "CoLab"
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -131,7 +128,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "account.context_processors.account",
     "messages.context_processors.inbox",
     "friends_app.context_processors.invitations",
-    "anadusis.context_processors.combined_inbox_count",
+    "context_processors.combined_inbox_count", #"anadusis.context_processors.combined_inbox_count",
 )
 
 COMBINED_INBOX_COUNT_SOURCES = (
