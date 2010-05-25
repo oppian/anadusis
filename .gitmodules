@@ -4,6 +4,3 @@
 [submodule "lib/django-video"]
 	path = lib/django-video
 	url = git://github.com/andrewebdev/django-video.git
-[submodule "lib/pinax"]
-	path = lib/pinax
-	url = git@github.com:oppian/pinax.git
