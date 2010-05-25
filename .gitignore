@@ -13,3 +13,4 @@ site_media/media/avatars/
 site_media/media/videos/
 site_media/media/photologue/
 *~
+site_media/static/**
