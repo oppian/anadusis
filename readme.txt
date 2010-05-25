@@ -9,3 +9,5 @@ pip install --no-deps --requirement lib/pinax/requirements/pinax.txt
 pip install --no-deps --requirement requirements.txt
 
 python lib/pinax/scripts/pinax-boot.py --development--source=lib/pinax pinax-env
+
+
