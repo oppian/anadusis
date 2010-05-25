@@ -204,6 +204,8 @@ INSTALLED_APPS = (
     
     'videostream', # http://cloud27.com/projects/project/djangovideo/
 
+	'django_extensions', # http://code.google.com/p/django-command-extensions/
+	
     # build tools
     'build',
     'south', # http://south.aeracode.org
