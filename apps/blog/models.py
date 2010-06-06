@@ -45,12 +45,12 @@ class Post(models.Model):
     publish = models.DateTimeField(_("publish"), default=datetime.now)
     created_at = models.DateTimeField(_("created at"), default=datetime.now)
     updated_at = models.DateTimeField(_("updated at"))
-    markup = models.CharField(_(u"Post Content Markup"),
-        max_length = 20,
-        choices = MARKUP_CHOICES,
-        null = True,
-        blank = True
-    )
+    #markup = models.CharField(_(u"Post Content Markup"),
+    #    max_length = 20,
+    #    choices = MARKUP_CHOICES,
+    #    null = True,
+    #    blank = True
+    #)
     tags = TagField()
     
     class Meta:
