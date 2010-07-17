@@ -132,7 +132,7 @@ def details(request, slug, template_name="videostream/details.html", group_slug=
     video = get_object_or_404(videos, slug=slug)
     
     # check if public or owned by self
-    if not video.is_public and request.user != video.autho:
+    if not video.is_public and request.user != video.author:
         raise Http404
     
     if video.author == request.user:
