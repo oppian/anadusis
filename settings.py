@@ -72,9 +72,10 @@ STATIC_URL = '/site_media/static/'
 
 # Additional directories which hold static files
 STATICFILES_DIRS = (
-    ('anadusis', os.path.join(PROJECT_ROOT, 'media')),
+    ('', os.path.join(PROJECT_ROOT, 'media')),
     ('social_project', os.path.join(PROJECT_ROOT, 'media')),
     ('pinax', os.path.join(PINAX_ROOT, 'media', PINAX_THEME, 'pinax')),
+    ('bookmarks', os.path.join(PINAX_ROOT, 'media', PINAX_THEME, 'bookmarks'))
 )
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
