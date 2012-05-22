@@ -209,7 +209,6 @@ def do_virtualenv(deploy_dir):
     execfile(activate_this, dict(__file__=activate_this))
     os.environ['PATH'] = '%s:%s' % (os.path.join(deploy_dir, 'pinax-env/bin'), _getenv('PATH'))
     # install requirements: pip install --no-deps --requirement requirements.txt
-    _pcall(['pip', 'install', '--no-deps', '--requirement', 'lib/pinax/requirements/pinax.txt'])
     _pcall(['pip', 'install', '--no-deps', '--requirement', 'requirements.txt'])
     
 def do_django(deploy_dir):
